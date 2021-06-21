@@ -2,6 +2,7 @@ type Author {
     id: ID!
     name: String!
     email: String!
+    homepage: String! @method(name: "getHomepage")
     posts: [Post!] @hasMany
     post(id: ID @eq): Post @find
 }
